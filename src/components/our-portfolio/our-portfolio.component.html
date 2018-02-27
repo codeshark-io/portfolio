@@ -1,0 +1,19 @@
+<section class="our-portfolio">
+  <h1 class="ui center aligned header header-bordered">
+    <span class="title" v-html="$t('our_portfolio.title')"></span>
+    <div class="sub header" v-html="$t('our_portfolio.sub_title')"></div>
+  </h1>
+
+  <div class="ui container">
+    <portfolio-search />
+
+    <transition class="fade">
+      <div class="ui three column doubling grid">
+        <div class="column" v-for="portfolio in allPortfolios">
+          <portfolio-item :portfolio="portfolio"/>
+        </div>
+      </div>
+    </transition>
+
+  </div>
+</section>
